@@ -36,12 +36,6 @@ This extension is configured using a jsonc file. You can open this configuration
 | `rust-analyzer.diagnostics.warningsAsHint`| List of warnings that should be displayed with hint severity |`[]`|
 | `rust-analyzer.experimental.procAttrMacros` | Expand attribute macros | `true` |
 | `rust-analyzer.lruCapacity` | Number of syntax trees rust-analyzer keeps in memory |`null`|
-| `rust-analyzer.inlayHints.enable`| Whether to show inlay hints |`true`|
-| `rust-analyzer.inlayHints.typeHints`| Whether to show inlay type hints for variables, **Neovim Only** | `true`|
-| `rust-analyzer.inlayHints.typeHintsSeparator`| Separator text for typeHints in virtual text |`‣`|
-| `rust-analyzer.inlayHints.chainingHints` | Whether to show inlay type hints for method chains, **Neovim Only** | `true` |
-| `rust-analyzer.inlayHints.chainingHintsSeparator` | Separator text for chainingHints in virtual text |`‣`|
-| `rust-analyzer.inlayHints.refreshOnInsertMode` | Whether to refresh inlayHints on insert mode | `false` |
 | `rust-analyzer.files.watcher` | Controls file watching implementation |`client`|
 | `rust-analyzer.notifications.cargoTomlNotFound` | Whether to show `can't find Cargo.toml` error message | `true` |
 | `rust-analyzer.cargo.autoreload` | Automatically refresh project info via `cargo metadata` on Cargo.toml changes | `true`|
@@ -107,7 +101,6 @@ You can use these commands by `:CocCommand XYZ`.
 | rust-analyzer.serverVersion | Show current Rust Analyzer server version |
 | rust-analyzer.ssr | Structural Search Replace |
 | rust-analyzer.syntaxTree | Show syntax tree |
-| rust-analyzer.toggleInlayHints | Toggle inlay hints on/off |
 | rust-analyzer.upgrade | Download latest `rust-analyzer` from [GitHub release](https://github.com/rust-analyzer/rust-analyzer/releases) |
 | rust-analyzer.viewHir | View Hir |
 | rust-analyzer.viewFileText | View File Text |

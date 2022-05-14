@@ -37,19 +37,6 @@ export class Config {
     return this.cfg.get<Env>('server.extraEnv') ?? {};
   }
 
-  get inlayHints() {
-    const hasVirtualText = workspace.isNvim && workspace.nvim.hasFunction('nvim_buf_set_virtual_text');
-    return {
-      enable: hasVirtualText && this.cfg.get<boolean>('inlayHints.enable'),
-      typeHints: hasVirtualText && this.cfg.get<boolean>('inlayHints.typeHints'),
-      typeHintsSeparator: this.cfg.get<string>('inlayHints.typeHintsSeparator'),
-      typeHintsWithVariable: this.cfg.get<boolean>('inlayHints.typeHintsWithVariable'),
-      chainingHints: hasVirtualText && this.cfg.get<boolean>('inlayHints.chainingHints'),
-      chainingHintsSeparator: this.cfg.get<string>('inlayHints.chainingHintsSeparator'),
-      refreshOnInsertMode: hasVirtualText && this.cfg.get<boolean>('inlayHints.refreshOnInsertMode'),
-    };
-  }
-
   get debug() {
     return {
       runtime: this.cfg.get<string>('debug.runtime'),

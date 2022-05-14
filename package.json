@@ -89,26 +89,6 @@
           "default": "launch",
           "description": "Specify the name of the vimspector configuration name. The following args will be passed to the configuration: `Executable` and `Args` (both strings)"
         },
-        "rust-analyzer.inlayHints.enable": {
-          "type": "boolean",
-          "default": true,
-          "description": "Whether to show inlay hints"
-        },
-        "rust-analyzer.inlayHints.typeHintsSeparator": {
-          "type": "string",
-          "default": "‣",
-          "description": "Separator text for typeHints in virtual text"
-        },
-        "rust-analyzer.inlayHints.chainingHintsSeparator": {
-          "type": "string",
-          "default": "‣",
-          "description": "Separator text for chainingHints in virtual text"
-        },
-        "rust-analyzer.inlayHints.refreshOnInsertMode": {
-          "type": "boolean",
-          "default": false,
-          "description": "Whether to refresh inlayHints on insert mode"
-        },
         "rust-analyzer.server.path": {
           "type": [
             "null",
@@ -866,11 +846,6 @@
       {
         "command": "rust-analyzer.syntaxTree",
         "title": "Show Syntax Tree",
-        "category": "Rust Analyzer"
-      },
-      {
-        "command": "rust-analyzer.toggleInlayHints",
-        "title": "Toggle inlay hints on/off",
         "category": "Rust Analyzer"
       },
       {

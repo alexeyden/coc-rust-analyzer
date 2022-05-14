@@ -453,16 +453,6 @@ export function upgrade(ctx: Ctx) {
   };
 }
 
-export function toggleInlayHints(ctx: Ctx) {
-  return async () => {
-    if (!ctx.config.inlayHints.chainingHints) {
-      window.showMessage(`Inlay hints for method chains is disabled. Toggle action does nothing;`, 'warning');
-      return;
-    }
-    await ctx.toggleInlayHints();
-  };
-}
-
 export async function applySnippetWorkspaceEdit(edit: WorkspaceEdit) {
   if (!edit?.documentChanges?.length) {
     return;
