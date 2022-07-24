@@ -82,6 +82,12 @@ export function memoryUsage(ctx: Ctx): Cmd {
   };
 }
 
+export function doFlycheck(ctx: Ctx): Cmd {
+  return async () => {
+    await ctx.client?.sendRequest(ra.doFlycheck);
+  };
+}
+
 export function matchingBrace(ctx: Ctx): Cmd {
   return async () => {
     const { document, position } = await workspace.getCurrentState();

@@ -21,6 +21,8 @@ export const serverStatus = new lc.NotificationType<ServerStatusParams>('experim
 
 export const reloadWorkspace = new lc.RequestType0<null, void>('rust-analyzer/reloadWorkspace');
 
+export const doFlycheck = new lc.RequestType0<null, void>('rust-analyzer/doFlycheck');
+
 export const hover = new lc.RequestType<HoverParams, lc.Hover | null, void>('textDocument/hover');
 
 export interface HoverParams {
